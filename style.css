@@ -1,0 +1,113 @@
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav img {
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+  position: relative;
+  width: 150px; /* Ancho de los elementos li */
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%; /* Ancho de los elementos a */
+  box-sizing: border-box; /* Evita que se añada un padding extra al ancho de los elementos a */
+}
+
+/* Submenús */
+nav ul ul {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  margin: 10px 0;
+}
+
+nav ul ul li a {
+  padding: 5px 10px;
+}
+
+/* Animación para los elementos del menú */
+nav li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  bottom: -10px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-out;
+}
+
+nav li:hover::before {
+  transform: scaleX(1);
+}
+
+.about {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+  margin: 0 20%;
+text-align: left;
+margin-bottom: 120px;
+
+}
+
+.about-img {
+  width: 200px;
+  height: auto;
+  float: left; /* Agregamos la propiedad float con valor left */
+  margin-right: 20px; /* Añadimos un margen derecho para separar el texto de la imagen */
+}
+
+
+.about-img img {
+  width: 200px;
+  height: auto;
+  border-radius: 10%;
+  
+}
+
+.about-text {
+  margin-left: 40px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.about img {
+  max-height: 100%;
+}
+
